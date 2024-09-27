@@ -297,10 +297,52 @@ header {
 .section-holder-2 {
   width: 100%;
   background-color: #636466;
+  position: relative;
 }
 
 .section-holder-2 video {
   width: 100%;
+}
+
+.section-holder-2 .video-controls {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  display: flex;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+  transition: all 0.2s ease-in-out;
+}
+
+.video-controls.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.fa {
+  color: #ffffff;
+  font-size: 28px;
+  margin-left: 20px;
+}
+
+.fa-volume-up {
+  margin-left: auto;
+}
+
+.fa-stop-circle-o {
+  margin-right: 20px;
 }
 
 .test {
