@@ -17,12 +17,12 @@ header {
 }
 
 .header-sec {
-  max-width: 1440px; /* or any max width you prefer */
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Vertically align items in the middle */
+  align-items: center;
 }
 
 .navigation {
@@ -65,10 +65,17 @@ header {
   background-color: #e129265e;
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 20px;
+}
+
+.sidebar.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .sidebar li {
@@ -82,6 +89,10 @@ header {
 
 .hidemobile {
   display: none;
+}
+
+.hideondesktop {
+  display: flex; /* Show on mobile */
 }
 
 .main-text h1 {
