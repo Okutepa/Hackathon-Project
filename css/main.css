@@ -5,6 +5,10 @@ body {
   box-sizing: border-box;
 }
 
+:root {
+  --plyr-color-main: #e12826;
+}
+
 .hidden {
   display: none;
 }
@@ -114,14 +118,19 @@ header {
 }
 
 .gallery-car {
-  display: flex;
   margin: 24px 0;
+  /* margin-inline: auto; */
+  
+}
+
+.car-2 {
+  display: none;
 }
 
 .gallery-car .placeholder {
   width: 159px;
   height: 159px;
-  background-color: #fff;
+  background-color: #000000;
   border-radius: 8px;
   margin-right: 16px;
 }
@@ -304,6 +313,37 @@ header {
   width: 100%;
 }
 
+#big-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  font-size: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0.8;
+}
+
+#big-play-button.hide-button {
+  opacity: 0;
+  pointer-events: auto;
+  transform: translate(-50%, -100%); /* Moves it offscreen upwards */
+}
+
+.big-play-button:hover {
+  opacity: 1;
+}
+
+.big-play-button i {
+  font-size: 100px;
+}
+
 .section-holder-2 .video-controls {
   position: absolute;
   right: 0;
@@ -319,6 +359,7 @@ header {
   transition: all 0.2s ease-in-out;
 }
 
+
 .video-controls.hide {
   opacity: 0;
   pointer-events: none;
@@ -326,23 +367,66 @@ header {
 
 button {
   padding: 0;
-  margin: 0;
-  background-color: transparent;
   border: 0;
+  background-color: transparent;
 }
 
-.fa {
-  color: #ffffff;
+.fa, .fa-solid {
+  color: #fff;
   font-size: 28px;
   margin-left: 20px;
+} 
+
+.fa-stop-circle-o {
+  margin-right: 20px;
 }
 
 .fa-volume-up {
   margin-left: auto;
 }
 
-.fa-stop-circle-o {
-  margin-right: 20px;
+#timer {
+  color: white; /* Change this to the color that contrasts with your background */
+  font-size: 16px; /* Adjust size as needed */
+  margin: 4px 24px 0 0; /* Align timer to the left if desired */
+}
+
+input[type="range"]#video-progress {
+  width: 50%;
+  }
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: #22ff00;
+  border-radius: 2rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #00ff1a;
+  outline-offset: 0.125rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: #00ff84;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 2rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #198672;
+  outline-offset: 0.125rem;
 }
 
 .test {
@@ -515,9 +599,38 @@ footer img {
     display: none;
   }
 
-  .gallery-car .placeholder {
-    width: 100%;
+  .gallery-car {
     height: 350px;
+    display: flex;
+  }
+
+  .gallery-car .placeholder {
+    height: 100%;
+  }
+
+  #placeholder-1 {
+    width: 300px;
+    
+  }
+
+  #placeholder-2 {
+    width: 350px;
+    
+  }
+
+  #placeholder-3 {
+    width: 255px;
+    
+  }
+
+  #placeholder-4 {
+    width: 350px;
+    
+  }
+
+  #placeholder-5 {
+    width: 160px;
+    
   }
 
   .card {
