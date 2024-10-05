@@ -1,18 +1,17 @@
 const sidebar = document.querySelector(".sidebar");
 const showSidebarButton = document.querySelector(".hideondesktop a");
 const hideSidebarButton = document.querySelector(".sidebar li:first-child a");
+const playerCon = document.querySelector("#player-container");
 const player = document.querySelector("video");
 const videoControls = document.querySelector("#video-controls");
-const playButton = document.querySelector("#play-button");
-const pauseButton = document.querySelector("#pause-button");
-const stopButton = document.querySelector("#stop-button");
+const bigPlayButton = document.querySelector("#big-play-button");
 const volumeSlider = document.querySelector("#change-vol");
 const fullScreen = document.querySelector("#full-screen");
-const playerCon = document.querySelector("#player-container");
+const timer = document.querySelector("#timer");
+const videoProgress = document.querySelector("#video-progress");
 
 player.controls = false;
 videoControls.classList.remove("hidden");
-videoControls.style.display = "flex";
 
 function showSidebar() {
   sidebar.classList.add("show");
@@ -22,41 +21,52 @@ function hideSidebar() {
   sidebar.classList.remove("show");
 }
 
-showSidebarButton.addEventListener("click", showSidebar);
-hideSidebarButton.addEventListener("click", hideSidebar);
-
 function playVideo() {
-  console.log("play called");
   player.play();
+  bigPlayButton.classList.add("hide-button"); // Hide the button offscreen
+  bigPlayButton.innerHTML = '<i class="fa fa-pause-circle-o"></i>'; // Change to pause icon
 }
 
 function pauseVideo() {
-  console.log("pause called");
   player.pause();
+  bigPlayButton.classList.remove("hide-button"); // Bring the button back onscreen
+  bigPlayButton.innerHTML = '<i class="fa fa-play-circle-o"></i>'; // Change to play icon
 }
 
-function stopVideo() {
-  console.log("stop called");
-  player.currentTime = 1;
-  pauseVideo();
+function togglePlayPause() {
+  if (player.paused) {
+    playVideo();
+  } else {
+    pauseVideo();
+  }
 }
 
 function changeVolume() {
-  console.log(volumeSlider.value);
   player.volume = volumeSlider.value;
 }
 
 function toggleFullScreen() {
-  console.log("toggle full Screen Called");
   if (document.fullscreenElement) {
     document.exitFullscreen();
-  } else if (document.webkitFullScreenElement) {
-    document.webkitFullScreenElement();
-  } else if (playerCon.webkitRequestFullScreen) {
+  } else if (document.webkitFullscreenElement) {
+    // Need this to support Safari
+    document.webkitExitFullscreen();
+  } else if (playerCon.webkitRequestFullscreen) {
+    // Need this to support Safari
     playerCon.webkitRequestFullscreen();
   } else {
     playerCon.requestFullscreen();
   }
+}
+
+function updateTimer() {
+  const currentTime = player.currentTime;
+  const minutes = Math.floor(currentTime / 60);
+  const seconds = Math.floor(currentTime % 60);
+  timer.textContent = `${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+  const percentage = (currentTime / player.duration) * 100;
+  videoProgress.value = percentage;
 }
 
 function hideControls() {
@@ -70,13 +80,21 @@ function showControls() {
   videoControls.classList.remove("hide");
 }
 
-playButton.addEventListener("click", playVideo);
-pauseButton.addEventListener("click", pauseVideo);
-stopButton.addEventListener("click", stopVideo);
+showSidebarButton.addEventListener("click", showSidebar);
+hideSidebarButton.addEventListener("click", hideSidebar);
+
+playerCon.addEventListener("click", togglePlayPause);
 volumeSlider.addEventListener("change", changeVolume);
 fullScreen.addEventListener("click", toggleFullScreen);
+playerCon.addEventListener('mouseenter', showControls);
+playerCon.addEventListener('mouseleave', hideControls);
+player.addEventListener('timeupdate', updateTimer); // Update timer on time update
+videoProgress.addEventListener('input', setVideoProgress);
 
 videoControls.addEventListener("mouseenter", showControls);
 videoControls.addEventListener("mouseleave", hideControls);
 player.addEventListener("mouseenter", showControls);
 player.addEventListener("mouseleave", hideControls);
+
+player.addEventListener('timeupdate', updateTimer); // Update timer on time update
+videoProgress.addEventListener('input', setVideoProgress); // Set video progress on slider input

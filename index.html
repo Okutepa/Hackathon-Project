@@ -72,13 +72,14 @@
       </div>
 
       <div class="gallery-car">
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
+        <div class="placeholder" id="placeholder-1"></div>
+        <div class="placeholder" id="placeholder-2"></div>
+        <div class="placeholder" id="placeholder-3"></div>
+        <div class="placeholder" id="placeholder-4"></div>
+        <div class="placeholder" id="placeholder-5"></div>
       </div>
 
-      <div class="gallery-car car-2">
+      <!-- <div class="gallery-car car-2">
         <div class="placeholder"></div>
         <div class="placeholder"></div>
         <div class="placeholder"></div>
@@ -208,19 +209,29 @@
         </div>
       </div>
 
-      <div class="section-holder-2">
+      <div id="player-container" class="section-holder-2">
         <video controls preload="metadata" poster="images/Video.png">
           <source src="video/placeholder-vide.mp4" type="video/mp4" />
           <source src="video/placeholder-vide.mp4" type="video/mp4" />
         </video>
+        <button id="big-play-button" class="big-play-button">
+          <i class="fa fa-play-circle-o"></i>
+        </button>
         <div class="video-controls hidden" id="video-controls">
-          <button id="play-button"><i class="fa fa-play-circle-o"></i></button>
-          <button id="pause-button"><i class="fa fa-pause-circle-o"></i></button>
-          <button id="stop-button"><i class="fa fa-stop-circle-o"></i></button>
+          <span id="timer">00:00</span>
+          <input type="range" id="video-progress" min="0" max="100" step="1" value="0" />
           <i class="fa fa-volume-up"></i>
-          <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+          <input
+            type="range"
+            id="change-vol"
+            step="0.05"
+            min="0"
+            max="1"
+            value="1"
+          />
+          
           <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
-      </div>
+        </div>
       </div>
 
       <div class="test">
@@ -489,7 +500,7 @@
           <div class="image image-9 col-start-3 col-span-2 l-col-start-9 l-col-span-4">
             <img src="images/gallery-image-holder-8.png" alt="" />
           </div>
-        </div>
+        </div> -->
 
 
 
@@ -517,10 +528,10 @@
           </div>
         </div>
       </div> -->
-      <footer>
+      <!-- <footer>
         <img src="images/logo-mobile-footer.png" alt="" />
         <p>© 2024 Copyright Fanshawe College</p>
-      </footer>
+      </footer> -->
     </main>
 
     <script src="js/main.js"></script>
