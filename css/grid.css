@@ -42,10 +42,10 @@ h5 {
 }
 
 .box {
-  background-color: powderblue;
+  /* background-color: powderblue; */
   color: rgb(27, 27, 27);
   border-radius: 5px;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -70,6 +70,7 @@ h5 {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  grid-auto-rows: min-content;
 }
 
 /* A keyword indicating that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of 1. */
