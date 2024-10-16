@@ -38,114 +38,81 @@ const testimonialCon = document.getElementById("testimonial-con");
 
 const portfolioCon = document.querySelector("#portfolio-con");
 const students = [
-  { name: "Rodriguez-Ramos Diego", link: "sahilgosaliya.com" },
-  { name: "Cooper Kayla", link: "johndoeportfolio.com" },
-  { name: "Lozon Ramona", link: "janesmithportfolio.com" },
-  { name: "Chen	Qingdong", link: "janesmithportfolio.com" },
-  { name: "Khan Taylor", link: "alicejohnsonportfolio.com" },
-  {
-    name: "Pelacek-Boutilier Cassidy",
-    link: "alicejohnsonportfolio.com",
-  },
-  { name: "Bilyea Isaac", link: "alicejohnsonportfolio.com" },
-  { name: "Carriere Ezra", link: "alicejohnsonportfolio.com" },
-  { name: "Salwan	Shauraya", link: "alicejohnsonportfolio.com" },
-  { name: "Reji Vazhavilayil	Rebin", link: "alicejohnsonportfolio.com" },
-  { name: "Park	Kyuri", link: "alicejohnsonportfolio.com" },
-  { name: "Meijer	Nikolai", link: "alicejohnsonportfolio.com" },
-  { name: "Hanbury	Xaviere", link: "alicejohnsonportfolio.com" },
-  { name: "Buck	Amari", link: "alicejohnsonportfolio.com" },
-  { name: "Sivaskaran	Thaseekaran", link: "alicejohnsonportfolio.com" },
-  { name: "Parmar	Meet Amrutbhai", link: "alicejohnsonportfolio.com" },
-  { name: "Reyes	Justin Rian", link: "alicejohnsonportfolio.com" },
-  { name: "Yantizhanov	Alisher", link: "alicejohnsonportfolio.com" },
-  { name: "Thakur	Parvesh", link: "alicejohnsonportfolio.com" },
-  { name: "Damen	Meghan", link: "alicejohnsonportfolio.com" },
-  {
-    name: "Amjad Omar Abu-Sa'ad	Saif",
-    link: "alicejohnsonportfolio.com",
-  },
-  { name: "Zhang	Bozhi", link: "alicejohnsonportfolio.com" },
-  { name: "Chu	Qiao-Yi", link: "alicejohnsonportfolio.com" },
-  { name: "Maxwell	Sashoye", link: "alicejohnsonportfolio.com" },
-  { name: "Bondarchuk	Dina", link: "alicejohnsonportfolio.com" },
-  { name: "Okutepa	Wisdom Utenwojo", link: "alicejohnsonportfolio.com" },
-  { name: "Macapagal	Bernardo Jr.", link: "alicejohnsonportfolio.com" },
-  { name: "Celis	Ezekiel John", link: "alicejohnsonportfolio.com" },
-  { name: "Macadams	Katrina", link: "alicejohnsonportfolio.com" },
-  { name: "Yam	Lok Ting Tina", link: "alicejohnsonportfolio.com" },
-  { name: "Nguyen	Thi Thanh Thuong", link: "alicejohnsonportfolio.com" },
-  {
-    name: "Quelali Evangelista	Jenifer",
-    link: "alicejohnsonportfolio.com",
-  },
-  {
-    name: "Nobre Do Nascimento	Rodrigo",
-    link: "alicejohnsonportfolio.com",
-  },
-  { name: "Gabbassova	Milana", link: "alicejohnsonportfolio.com" },
-  {
-    name: "Cardenas Ramos	Izel Esteban",
-    link: "alicejohnsonportfolio.com",
-  },
-  { name: "Flores	Timothy Bryle", link: "alicejohnsonportfolio.com" },
-  { name: "Sit	Loi Pan", link: "alicejohnsonportfolio.com" },
-  { name: "Polchai	Napas", link: "alicejohnsonportfolio.com" },
-  { name: "Singh	Akamjot", link: "alicejohnsonportfolio.com" },
-  { name: "Opadele	Emmanuel", link: "alicejohnsonportfolio.com" },
-  { name: "Sojan	Shon", link: "alicejohnsonportfolio.com" },
-  { name: "Biju Varghese	Shiyon", link: "alicejohnsonportfolio.com" },
-  {
-    name: "Jashan Kumar	Jashan Kumar",
-    link: "alicejohnsonportfolio.com",
-  },
-  {
-    name: "Dhaliwal	Meetinder Singh",
-    link: "alicejohnsonportfolio.com",
-  },
-  {
-    name: "Harnoorpreet Kaur	Harnoorpreet Kaur",
-    link: "alicejohnsonportfolio.com",
-  },
-  {
-    name: "Juntarattanakamol	Apapat",
-    link: "alicejohnsonportfolio.com",
-  },
-  { name: "Bandarra	Sydney", link: "alicejohnsonportfolio.com" },
-  { name: "Ogbeide	Osarieme", link: "alicejohnsonportfolio.com" },
-  { name: "Huertas	Tanya Mae", link: "alicejohnsonportfolio.com" },
-  {
-    name: "Cano Menendez	Carlos Andres",
-    link: "alicejohnsonportfolio.com",
-  },
-  { name: "Bishokarma	Kamana", link: "alicejohnsonportfolio.com" },
-  { name: "Sham	King Yin", link: "alicejohnsonportfolio.com" },
-  { name: "Benipal	Tapshveer", link: "alicejohnsonportfolio.com" },
-  { name: "Laput	Dixie Marie", link: "alicejohnsonportfolio.com" },
-  { name: "Lie	Keith", link: "alicejohnsonportfolio.com" },
-  {
-    name: "Gamborgi Menezes	Henrique",
-    link: "alicejohnsonportfolio.com",
-  },
-  { name: "Mahaittidon	Natchanon", link: "alicejohnsonportfolio.com" },
-  { name: "Chan	Wing Lam Stephanie", link: "alicejohnsonportfolio.com" },
-  { name: "Lai	Yi Ting", link: "alicejohnsonportfolio.com" },
-  { name: "Gohetia	Sheldon", link: "alicejohnsonportfolio.com" },
-  { name: "Gregory	Joyal", link: "alicejohnsonportfolio.com" },
-  { name: "Sidhu	Sukhbhag Singh", link: "alicejohnsonportfolio.com" },
-  { name: "Shah	Het", link: "alicejohnsonportfolio.com" },
-  { name: "Patel	Lav Pareshkumar", link: "alicejohnsonportfolio.com" },
-  {
-    name: "Jayasinghe Mudalige	Wimarsha",
-    link: "alicejohnsonportfolio.com",
-  },
-  { name: "Ho	Gia Khang", link: "alicejohnsonportfolio.com" },
-  { name: "Bendzsel	Kristina", link: "alicejohnsonportfolio.com" },
-  // Add more student objects here
+  { name: "Rodriguez-Ramos Diego", link: "rodriguez-ramosdiego.com" },
+  { name: "Cooper Kayla", link: "cooperkayla.com" },
+  { name: "Lozon Ramona", link: "lozonramona.com" },
+  { name: "Chen Qingdong", link: "chenqingdong.com" },
+  { name: "Khan Taylor", link: "khantaylor.com" },
+  { name: "Pelacek-Boutilier Cassidy", link: "pelacek-boutiliercassidy.com" },
+  { name: "Bilyea Isaac", link: "bilyeaisaac.com" },
+  { name: "Carriere Ezra", link: "carriereezra.com" },
+  { name: "Salwan Shauraya", link: "salwanshauraya.com" },
+  { name: "Reji Vazhavilayil Rebin", link: "rejivazhavilayilrebin.com" },
+  { name: "Park Kyuri", link: "parkkyuri.com" },
+  { name: "Meijer Nikolai", link: "meijernikolai.com" },
+  { name: "Hanbury Xaviere", link: "hanburyxaviere.com" },
+  { name: "Buck Amari", link: "buckamari.com" },
+  { name: "Sivaskaran Thaseekaran", link: "sivaskarenthaseekaran.com" },
+  { name: "Parmar Meet Amrutbhai", link: "parmarmeetamrutbhai.com" },
+  { name: "Reyes Justin Rian", link: "reyesjustinrian.com" },
+  { name: "Yantizhanov Alisher", link: "yantizhanovalisher.com" },
+  { name: "Thakur Parvesh", link: "thakurparvesh.com" },
+  { name: "Damen Meghan", link: "damenmeghan.com" },
+  { name: "Amjad Omar Abu-Sa'ad Saif", link: "amjadomarabu-saadsaif.com" },
+  { name: "Zhang Bozhi", link: "zhangbozhi.com" },
+  { name: "Chu Qiao-Yi", link: "chuqiaoyi.com" },
+  { name: "Maxwell Sashoye", link: "maxwellsashoye.com" },
+  { name: "Bondarchuk Dina", link: "bondarchukdina.com" },
+  { name: "Okutepa Wisdom Utenwojo", link: "okutepawisdomutenwojo.com" },
+  { name: "Macapagal Bernardo Jr.", link: "macapagalbernardojr.com" },
+  { name: "Celis Ezekiel John", link: "celisezikeljohn.com" },
+  { name: "Macadams Katrina", link: "macadamskatrina.com" },
+  { name: "Yam Lok Ting Tina", link: "yamloktingtina.com" },
+  { name: "Nguyen Thi Thanh Thuong", link: "nguyenthithanhthuong.com" },
+  { name: "Quelali Evangelista Jenifer", link: "quelalievangelistajenifer.com" },
+  { name: "Nobre Do Nascimento Rodrigo", link: "nobredonascimentorodrigo.com" },
+  { name: "Gabbassova Milana", link: "gabbassovamilana.com" },
+  { name: "Cardenas Ramos Izel Esteban", link: "cardenasramosizeledteban.com" },
+  { name: "Flores Timothy Bryle", link: "florestimothybryle.com" },
+  { name: "Sit Loi Pan", link: "sitloipan.com" },
+  { name: "Polchai Napas", link: "polchainapas.com" },
+  { name: "Singh Akamjot", link: "singhakamjot.com" },
+  { name: "Opadele Emmanuel", link: "opadeleemmanuel.com" },
+  { name: "Sojan Shon", link: "sojanshon.com" },
+  { name: "Biju Varghese Shiyon", link: "bijuvargheseshiyon.com" },
+  { name: "Jashan Kumar Jashan Kumar", link: "jashankumar.com" },
+  { name: "Dhaliwal Meetinder Singh", link: "dhaliwalmeetindersingh.com" },
+  { name: "Harnoorpreet Kaur Harnoorpreet Kaur", link: "harnoorpreetkaur.com" },
+  { name: "Juntarattanakamol Apapat", link: "juntarattanakamolapapat.com" },
+  { name: "Bandarra Sydney", link: "bandarrasydney.com" },
+  { name: "Ogbeide Osarieme", link: "ogbeideosarieme.com" },
+  { name: "Huertas Tanya Mae", link: "huertastanyamae.com" },
+  { name: "Cano Menendez Carlos Andres", link: "canomenendezcarlosandres.com" },
+  { name: "Bishokarma Kamana", link: "bishokarmakamana.com" },
+  { name: "Sham King Yin", link: "shamkingyin.com" },
+  { name: "Benipal Tapshveer", link: "benipaltapshveer.com" },
+  { name: "Laput Dixie Marie", link: "laputdixiemarie.com" },
+  { name: "Lie Keith", link: "liekeith.com" },
+  { name: "Gamborgi Menezes Henrique", link: "gamborgimenezeshenrique.com" },
+  { name: "Mahaittidon Natchanon", link: "mahaittidonnatchanon.com" },
+  { name: "Chan Wing Lam Stephanie", link: "chanwinglamstephanie.com" },
+  { name: "Lai Yi Ting", link: "laiyiting.com" },
+  { name: "Gohetia Sheldon", link: "gohetiasheldon.com" },
+  { name: "Gregory Joyal", link: "gregoryjoyal.com" },
+  { name: "Sidhu Sukhbhag Singh", link: "sidhusukhbhagsingh.com" },
+  { name: "Shah Het", link: "shahhet.com" },
+  { name: "Patel Lav Pareshkumar", link: "patellavpareshkumar.com" },
+  { name: "Jayasinghe Mudalige Wimarsha", link: "jayasinghemudaligewimarsha.com" },
+  { name: "Ho Gia Khang", link: "hogiakhang.com" },
+  { name: "Bendzsel Kristina", link: "bendzselkristina.com" },
 ];
 
-// Variables
-let currentIndex = 0; // Current active index
+const developers = [
+  { id: "developer1", name: "Napas Polchai", website: "Napas.com" },
+  { id: "developer2", name: "Wisdom Okutepa", website: "Wisdomokutepa.com" },
+  { id: "developer3", name: "Justine Rian Reyes", website: "Justinereyes.com" },
+  { id: "developer4", name: "Alisher Yantishanov", website: "Alisher.com" }
+];
 
 player.controls = false;
 videoControls.classList.remove("hidden");
@@ -219,6 +186,11 @@ function showControls() {
   videoControls.classList.remove("hide");
 }
 
+function setVideoProgress() {
+  const progress = (videoProgress.value / videoProgress.max) * player.duration;
+  player.currentTime = progress;
+}
+
 function populateTestimonials() {
   testimonials.forEach((testimonial) => {
     const testimonialDiv = document.getElementById(testimonial.id);
@@ -254,6 +226,21 @@ students.forEach((student) => {
   portfolioCon.appendChild(studentDiv);
 });
 
+function populateDevelopers() {
+  developers.forEach((developer) => {
+    const developerDiv = document.getElementById(developer.id);
+
+    if (developerDiv) {
+      developerDiv.innerHTML = `
+        <h4>${developer.name}</h4>
+        <p>${developer.website}</p>
+      `;
+    }
+  });
+}
+
+populateDevelopers();
+
 showSidebarButton.addEventListener("click", showSidebar);
 hideSidebarButton.addEventListener("click", hideSidebar);
 
@@ -270,9 +257,5 @@ videoControls.addEventListener("mouseleave", hideControls);
 player.addEventListener("mouseenter", showControls);
 player.addEventListener("mouseleave", hideControls);
 
-player.addEventListener("timeupdate", updateTimer); // Update timer on time update
-videoProgress.addEventListener("input", setVideoProgress); // Set video progress on slider input
-
-window.addEventListener("resize", renderTestimonials);
-
-document.addEventListener("DOMContentLoaded", init);
+player.addEventListener("timeupdate", updateTimer);
+videoProgress.addEventListener("input", setVideoProgress);
