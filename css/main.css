@@ -179,6 +179,44 @@ header {
   margin-bottom: 34px;
 }
 
+.gallery-car {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+
+.car-wrap {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  transform: translateX(0);
+  animation: slide 10s infinite linear;
+}
+.carousel{
+  width: 100%;
+  display: flex;
+}
+
+.carousel img {
+  border-radius: 10px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .card {
   width: 100%;
   background-color: #e12826;
@@ -779,6 +817,12 @@ footer img {
   margin-top: 396px;
 }
 
+@media screen and (min-width: 768px) {
+  .gallery-car {
+    height: 300px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .header-sec nav ul {
     display: flex;
@@ -814,41 +858,7 @@ footer img {
     display: none;
   }
 
-  .gallery-car {
-    height: 350px;
-    overflow: hidden;
-    position: relative;
-  }
 
-  .car-wrap {
-    display: flex;
-    width: 200%;
-    height: 100%;
-    position: absolute;
-    left: 0%;
-    animation: slide 10s infinite linear;
-  }
-
-  .carousel{
-    width: 100%;
-    display: flex;
-  }
-
-  .carousel img {
-    margin: 10px;
-    border-radius: 10px;
-    height: 100%;
-  }
-
-  @keyframes slide {
-    0% {
-      left: 0%;
-    }
-
-    100% {
-      left: -100%;
-    }
-  }
 
   .card {
     display: block;
@@ -1096,4 +1106,18 @@ footer img {
     top: 0;
     height: 39px;
   }
+
+
+.gallery-car {
+  height: 350px;
+}
+
+.car-wrap {
+  animation-duration: 15s;
+}
+
+.car-wrap:hover {
+  animation-play-state: paused;
+}
+  
 }
