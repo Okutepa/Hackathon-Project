@@ -36,7 +36,83 @@ const testimonials = [
 
 const testimonialCon = document.getElementById("testimonial-con");
 
-console.log(testimonials);
+const portfolioCon = document.querySelector("#portfolio-con");
+const students = [
+  { name: "Rodriguez-Ramos Diego", link: "rodriguez-ramosdiego.com" },
+  { name: "Cooper Kayla", link: "cooperkayla.com" },
+  { name: "Lozon Ramona", link: "lozonramona.com" },
+  { name: "Chen Qingdong", link: "chenqingdong.com" },
+  { name: "Khan Taylor", link: "khantaylor.com" },
+  { name: "Pelacek-Boutilier Cassidy", link: "pelacek-boutiliercassidy.com" },
+  { name: "Bilyea Isaac", link: "bilyeaisaac.com" },
+  { name: "Carriere Ezra", link: "carriereezra.com" },
+  { name: "Salwan Shauraya", link: "salwanshauraya.com" },
+  { name: "Reji Vazhavilayil Rebin", link: "rejivazhavilayilrebin.com" },
+  { name: "Park Kyuri", link: "parkkyuri.com" },
+  { name: "Meijer Nikolai", link: "meijernikolai.com" },
+  { name: "Hanbury Xaviere", link: "hanburyxaviere.com" },
+  { name: "Buck Amari", link: "buckamari.com" },
+  { name: "Sivaskaran Thaseekaran", link: "sivaskarenthaseekaran.com" },
+  { name: "Parmar Meet Amrutbhai", link: "parmarmeetamrutbhai.com" },
+  { name: "Reyes Justin Rian", link: "reyesjustinrian.com" },
+  { name: "Yantizhanov Alisher", link: "yantizhanovalisher.com" },
+  { name: "Thakur Parvesh", link: "thakurparvesh.com" },
+  { name: "Damen Meghan", link: "damenmeghan.com" },
+  { name: "Amjad Omar Abu-Sa'ad Saif", link: "amjadomarabu-saadsaif.com" },
+  { name: "Zhang Bozhi", link: "zhangbozhi.com" },
+  { name: "Chu Qiao-Yi", link: "chuqiaoyi.com" },
+  { name: "Maxwell Sashoye", link: "maxwellsashoye.com" },
+  { name: "Bondarchuk Dina", link: "bondarchukdina.com" },
+  { name: "Okutepa Wisdom Utenwojo", link: "okutepawisdomutenwojo.com" },
+  { name: "Macapagal Bernardo Jr.", link: "macapagalbernardojr.com" },
+  { name: "Celis Ezekiel John", link: "celisezikeljohn.com" },
+  { name: "Macadams Katrina", link: "macadamskatrina.com" },
+  { name: "Yam Lok Ting Tina", link: "yamloktingtina.com" },
+  { name: "Nguyen Thi Thanh Thuong", link: "nguyenthithanhthuong.com" },
+  { name: "Quelali Evangelista Jenifer", link: "quelalievangelistajenifer.com" },
+  { name: "Nobre Do Nascimento Rodrigo", link: "nobredonascimentorodrigo.com" },
+  { name: "Gabbassova Milana", link: "gabbassovamilana.com" },
+  { name: "Cardenas Ramos Izel Esteban", link: "cardenasramosizeledteban.com" },
+  { name: "Flores Timothy Bryle", link: "florestimothybryle.com" },
+  { name: "Sit Loi Pan", link: "sitloipan.com" },
+  { name: "Polchai Napas", link: "polchainapas.com" },
+  { name: "Singh Akamjot", link: "singhakamjot.com" },
+  { name: "Opadele Emmanuel", link: "opadeleemmanuel.com" },
+  { name: "Sojan Shon", link: "sojanshon.com" },
+  { name: "Biju Varghese Shiyon", link: "bijuvargheseshiyon.com" },
+  { name: "Jashan Kumar Jashan Kumar", link: "jashankumar.com" },
+  { name: "Dhaliwal Meetinder Singh", link: "dhaliwalmeetindersingh.com" },
+  { name: "Harnoorpreet Kaur Harnoorpreet Kaur", link: "harnoorpreetkaur.com" },
+  { name: "Juntarattanakamol Apapat", link: "juntarattanakamolapapat.com" },
+  { name: "Bandarra Sydney", link: "bandarrasydney.com" },
+  { name: "Ogbeide Osarieme", link: "ogbeideosarieme.com" },
+  { name: "Huertas Tanya Mae", link: "huertastanyamae.com" },
+  { name: "Cano Menendez Carlos Andres", link: "canomenendezcarlosandres.com" },
+  { name: "Bishokarma Kamana", link: "bishokarmakamana.com" },
+  { name: "Sham King Yin", link: "shamkingyin.com" },
+  { name: "Benipal Tapshveer", link: "benipaltapshveer.com" },
+  { name: "Laput Dixie Marie", link: "laputdixiemarie.com" },
+  { name: "Lie Keith", link: "liekeith.com" },
+  { name: "Gamborgi Menezes Henrique", link: "gamborgimenezeshenrique.com" },
+  { name: "Mahaittidon Natchanon", link: "mahaittidonnatchanon.com" },
+  { name: "Chan Wing Lam Stephanie", link: "chanwinglamstephanie.com" },
+  { name: "Lai Yi Ting", link: "laiyiting.com" },
+  { name: "Gohetia Sheldon", link: "gohetiasheldon.com" },
+  { name: "Gregory Joyal", link: "gregoryjoyal.com" },
+  { name: "Sidhu Sukhbhag Singh", link: "sidhusukhbhagsingh.com" },
+  { name: "Shah Het", link: "shahhet.com" },
+  { name: "Patel Lav Pareshkumar", link: "patellavpareshkumar.com" },
+  { name: "Jayasinghe Mudalige Wimarsha", link: "jayasinghemudaligewimarsha.com" },
+  { name: "Ho Gia Khang", link: "hogiakhang.com" },
+  { name: "Bendzsel Kristina", link: "bendzselkristina.com" },
+];
+
+const developers = [
+  { id: "developer1", name: "Napas Polchai", website: "Napas.com" },
+  { id: "developer2", name: "Wisdom Okutepa", website: "Wisdomokutepa.com" },
+  { id: "developer3", name: "Justine Rian Reyes", website: "Justinereyes.com" },
+  { id: "developer4", name: "Alisher Yantishanov", website: "Alisher.com" }
+];
 
 player.controls = false;
 videoControls.classList.remove("hidden");
@@ -110,6 +186,11 @@ function showControls() {
   videoControls.classList.remove("hide");
 }
 
+function setVideoProgress() {
+  const progress = (videoProgress.value / videoProgress.max) * player.duration;
+  player.currentTime = progress;
+}
+
 function populateTestimonials() {
   testimonials.forEach((testimonial) => {
     const testimonialDiv = document.getElementById(testimonial.id);
@@ -124,6 +205,41 @@ function populateTestimonials() {
   });
 }
 populateTestimonials();
+
+students.forEach((student) => {
+  const studentDiv = document.createElement("div");
+  studentDiv.classList.add("col-span-full");
+  studentDiv.classList.add("student");
+
+  const studentName = document.createElement("h4");
+  studentName.textContent = student.name;
+
+  const studentLink = document.createElement("a");
+  studentLink.href = `http://${student.link}`;
+  studentLink.target = "_blank";
+  studentLink.textContent = student.link;
+  studentLink.classList.add("student-link");
+
+  studentDiv.appendChild(studentName);
+  studentDiv.appendChild(studentLink);
+
+  portfolioCon.appendChild(studentDiv);
+});
+
+function populateDevelopers() {
+  developers.forEach((developer) => {
+    const developerDiv = document.getElementById(developer.id);
+
+    if (developerDiv) {
+      developerDiv.innerHTML = `
+        <h4>${developer.name}</h4>
+        <p>${developer.website}</p>
+      `;
+    }
+  });
+}
+
+populateDevelopers();
 
 showSidebarButton.addEventListener("click", showSidebar);
 hideSidebarButton.addEventListener("click", hideSidebar);
@@ -141,7 +257,5 @@ videoControls.addEventListener("mouseleave", hideControls);
 player.addEventListener("mouseenter", showControls);
 player.addEventListener("mouseleave", hideControls);
 
-player.addEventListener("timeupdate", updateTimer); // Update timer on time update
-videoProgress.addEventListener("input", setVideoProgress); // Set video progress on slider input
-
-window.addEventListener("resize", renderTestimonials);
+player.addEventListener("timeupdate", updateTimer);
+videoProgress.addEventListener("input", setVideoProgress);
