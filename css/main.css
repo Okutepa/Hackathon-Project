@@ -28,6 +28,10 @@ span {
   display: none;
 }
 
+.logo-mob {
+  width: 700px;
+}
+
 header {
   background-color: #e12826;
   padding: 16px 0;
@@ -149,7 +153,8 @@ header {
 .title-des {
   background-color: #fff;
   color: #e12826;
-  padding-bottom: 82px;
+  padding-bottom: 20px;
+  padding-top: 42px;
 }
 
 .title-sub h2 {
@@ -203,15 +208,22 @@ header {
   }
 }
 
+.title-bg {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 20px 40px #0000000A;
+  padding-bottom: 72px;
+}
+
 .card {
   text-align: left;
   width: 100%;
-  background-color: #e12826;
+  background-color: #b3282d;
   padding: 0 8px;
   margin-bottom: 32px;
   color: #fff;
   border-radius: 8px;
-  box-shadow: 0px 2px 32px -5px rgba(0, 0, 0, 0.52);
+  box-shadow: 0px 2px 32px -5px rgba(0, 0, 0, 1);
   transition: 0.50s transform ease-in-out;
 }
 
@@ -445,13 +457,12 @@ header {
 
 .srishti h2 {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #000;
   margin-bottom: 32px;
 }
 
 .background h3 {
-  margin-top: 48px;
   margin-bottom: 24px;
   font-size: 2rem;
   font-weight: 600;
@@ -470,10 +481,14 @@ header {
   padding-bottom: 72px;
 }
 
+#pro-goal {
+  background-color: #e12826;
+}
+
 .project-goal h3 {
   margin: 48px 0 28px 0;
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .project-goal p {
@@ -912,6 +927,14 @@ footer p {
     display: none;
   }
 
+  .title-bg {
+    background-color: #ffffff;
+    margin: 0px 72px 72px 72px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px #0000000A;
+    padding-bottom: 72px;
+  }
+
   .card {
     display: block;
   }
@@ -1019,6 +1042,10 @@ footer p {
     background-color: #b3282d;
     border-radius: 16px;
     padding: 0 32px 72px 32px;
+  }
+
+  .background h3 {
+    margin-top: 32px;
   }
 
   .project-goal-bg {
@@ -1212,6 +1239,14 @@ footer p {
     margin-bottom: 48px;
   }
 
+  .title-bg {
+    background-color: #ffffff;
+    margin: 72px 24px 72px 24px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 40px #0000000A;
+    padding-bottom: 72px;
+  }
+
   .more-stu {
     margin-top: 32px;
   }
@@ -1266,6 +1301,10 @@ footer p {
     padding-left: 32px;
     padding-right: 32px;
     border-radius: 20px;
+  }
+
+  .background h3 {
+    margin-top: 32px;
   }
 
   .project-goal-bg {
