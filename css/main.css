@@ -237,14 +237,12 @@ header {
   width: 100%;
 }
 
-.connect h3 {
-  color: #b3282d;
-  text-align: left;
-  margin-top: 32px;
-  font-weight: 400;
+.connect-text {
+  padding-top: 38px;
+  /* 1877-627-6645 */
 }
 
-.connect h2 {
+.connect-text h3 {
   color: #000;
   text-align: left;
   font-size: 3rem;
@@ -252,9 +250,17 @@ header {
   letter-spacing: 0px;
   margin-top: 0;
   margin-bottom: 32px;
+  text-transform: none;
 }
 
-.connect p {
+.connect-text h2 {
+  color: #b3282d;
+  text-align: left;
+  margin-top: 32px;
+  font-weight: 400;
+}
+
+.connect-text p {
   color: #636466;
   letter-spacing: 0.13px;
   text-transform: capitalize;
@@ -558,6 +564,10 @@ input[type="range"]:focus::-moz-range-thumb {
   padding-bottom: 40px;
 }
 
+#testimonial-container {
+  display: contents;
+}
+
 .test-sub p {
   font-weight: 300;
   margin: 72px 0 8px 0;
@@ -642,6 +652,7 @@ input[type="range"]:focus::-moz-range-thumb {
 
 #masonry-con {
   grid-template-rows: repeat(16, minmax(0, 1fr));
+  padding-bottom: 250px;
 }
 
 .box img {
@@ -695,60 +706,65 @@ input[type="range"]:focus::-moz-range-thumb {
   display: none;
 }
 
-/* .gallery {
-  background-color: #b3282d;
-  padding-top: 30px;
-  padding-bottom: 200px;
+.contact {
   position: relative;
-  
 }
 
-#image-try {
-  grid-auto-rows: auto;
-} */
+.opportunity {
+  display: none;
+}
 
-/* .image img {
+.cta {
+  background-color: #e12826;
+  padding: 32px 24px;
+  border-radius: 16px;
+  position: absolute;
+  top: -150px;
+  z-index: 2;
+  box-shadow: 0px 20px 40px #0000000a;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 128px;
+}
+
+.cta h2 span {
+  font-weight: 400;
+  color: #fff;
+}
+
+.input-wrapper {
+  position: relative;
   width: 100%;
-  height: auto;
-  object-fit: cover; 
+  margin-top: 24px;
 }
 
-.image-1 img {
+.input-wrapper .text-input {
+  height: 39px;
   width: 100%;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  background-color: #e12826;
+  padding-left: 23px;
+  font-size: 1rem;
 }
 
-.image-2 img {
-  width: 100%;
-  margin-top: 16px;
+.input-wrapper .text-input::placeholder {
+  color: #fff;
 }
 
-.image-3 {
-  margin-top: 16px;
-  height: 122px;
+.submit-btn {
+  width: 59px;
+  height: 31px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  background-color: #fff;
+  color: #e12826;
+  border-radius: 20px;
 }
-
-.image-4 {
-  grid-row: span 1;
-
-}
-
-.image-4 img {
-  width: 100%;
-}
-
-.image-5 {
-  width: 100%;
-}
-
-.image-6 img {
-  width: 100%;
-  margin-top: 16px;
-}
-
-.image-7,
-.image-8 {
-  margin-top: 16px;
-} */
 
 footer {
   position: absolute;
@@ -801,7 +817,7 @@ footer img {
   .gallery-car {
     height: 350px;
     display: flex;
-    overflow: hidden; /* Ensures no overflow of images */
+    overflow: hidden;
   }
 
   .gallery-car:hover {
@@ -810,10 +826,10 @@ footer img {
 
   @keyframes sliding {
     0% {
-      transform: translateX(0%); /* Start at the original position */
+      transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%); /* Slide fully to the left */
+      transform: translateX(-100%);
     }
   }
 
@@ -841,6 +857,15 @@ footer img {
     text-align: center;
   }
 
+  .invitation {
+    padding-bottom: 72px;
+  }
+
+  .speakers p {
+    text-align: center;
+    text-transform: none;
+  }
+
   .venue-card {
     margin-top: 0;
     margin-bottom: 0;
@@ -852,9 +877,29 @@ footer img {
     margin-bottom: 0;
   }
 
+  .connect img {
+    height: 630px;
+  }
+
+  .connect-text h3 {
+    margin-top: 8px;
+    margin-bottom: 72px;
+  }
+
+  .connect-text p {
+    margin-bottom: 24px;
+  }
+
+  .venue {
+    margin-top: 128px;
+  }
+
+  .srishti p {
+    margin-top: 0;
+  }
+
   .client-project {
     height: 540px;
-    margin-top: 128px;
     text-align: left;
   }
 
@@ -872,6 +917,33 @@ footer img {
     background-color: #000;
   }
 
+  .srishti {
+    text-align: center;
+  }
+
+  .srishti-foundation {
+    background-color: #fff;
+    padding-bottom: 0px;
+  }
+
+  .background {
+    background-color: #b3282d;
+    border-radius: 16px;
+    padding: 0 32px 72px 32px;
+  }
+
+  .project-goal-bg {
+    background-color: #fff;
+    padding-bottom: 128px;
+    padding-top: 72px;
+  }
+
+  .project-goal {
+    background-color: #e12826;
+    border-radius: 16px;
+    padding: 0 32px 72px 32px;
+  }
+
   .section-holder-2 video {
     width: 100%;
   }
@@ -884,6 +956,16 @@ footer img {
     display: block;
   }
 
+  .showcase-bg {
+    background-color: #000;
+    padding-bottom: 128px;
+  }
+
+  .showcase {
+    margin: 0 50px;
+    border-radius: 16px;
+  }
+
   .students-mobile .student {
     display: inline-block;
     margin-right: 67px;
@@ -894,32 +976,8 @@ footer img {
     margin-right: 0px;
   }
 
-  .gallery {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 100px 300px;
-    grid-gap: 10px;
-  }
-
-  .gallery-item {
-    width: 100%;
-    height: 100%;
-  }
-
-  .gallery-item .image {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .gallery-item .image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .masonry-bg {
+    padding-top: 128px;
   }
 
   #box1 {
@@ -970,133 +1028,67 @@ footer img {
     order: 1;
   }
 
-  /* #image-try {
-    position: relative;
-  }
-
-  .image-1 {
-    height: 413px;
-  }
-
-  .image-1 img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .image-2 {
-    height: 350px;
-    margin-top: 0px;
-  }
-
-  .image-2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .image-3 {
-    height: 541px;
-    margin-top: 0px;
-  }
-
-  .image-3 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-  }
-
-  .image-4 {
-    height: 541px;
+  .opportunity {
     position: absolute;
+    display: block;
+    top: -150px;
+    border-radius: 16px;
+    box-shadow: 0px 20px 40px #0000000a;
     z-index: 2;
-    top: 428px;
+    background-color: #fff;
+    padding: 72px 32px;
+    color: #000;
   }
 
-  .image-4 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
+  .opportunity h2 {
+    color: #000;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 32px;
   }
 
-  .image-5 {
-    width: 100%;
-    height: 541px;
-    margin-bottom: -290px;
-    position: absolute;
-    top: 382px;
-  }
-
-  .image-5 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-  }
-
-  .image-6 {
-    height: 476px;
-    margin-top: 38px;
-  }
-
-  .image-6 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-    margin-top: 0;
-  }
-
-  .image-7 {
-    height: 413px;
-    margin-top: 0px;
-    position: absolute;
-    z-index: 4;
-    top: 1052px;
-  }
-
-  .image-7 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-  }
-
-  .image-8 {
-    height: 476px;
-    position: relative;
+  .opportunity h2 span {
     z-index: 2;
-    top: -88px;
+    font-weight: 600;
   }
 
-  .image-8 img {
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
+  .opportunity button {
+    background-color: #e12826;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 32px;
   }
 
-  .image-9 {
-    height: 350px;
-    position: relative;
+  .cta {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 42px;
+    padding-right: 42px;
   }
 
-  .image-9 img {
-    position: absolute;
-    z-index: 2;
-    top: 50px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-  } */
+  .cta h2 {
+    font-size: 3rem;
+    margin-top: 72px;
+    margin-bottom: 32px;
+  }
 
-  /* .contact {
-    position: absolute;
-    z-index: 2;
-    background-color: blue;
+  .cta p {
+    width: 381px;
+  }
 
-  } */
+  .cta input {
+    height: 39px;
+    width: 297px;
+    margin-bottom: 48px;
+  }
+
+  .input-wrapper .text-input {
+    width: 310px;
+  }
+
+  .input-wrapper .submit-btn {
+    top: 0;
+    height: 39px;
+  }
 }
